@@ -1,0 +1,8 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "modules": false
+    }]
+  ],
+  "plugins": ["@babel/transform-runtime", "@babel/external-helpers"]  // 配置runtime，不设置会报错
+}

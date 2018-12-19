@@ -1,7 +1,7 @@
 'use strict';
 
 function a(name) {
-  const temp = `Hello, ${name}!`;
+  var temp = "Hello, ".concat(name, "!");
   return temp;
 }
 
@@ -10,13 +10,14 @@ function a(name) {
  * @param  {Array} arr an array of numbers
  * @return {Number}    the sum of all the array values
  */
-const addArray = arr => {
-  const result = arr.reduce((a, b) => a + b, 0);
+var addArray = function addArray(arr) {
+  var result = arr.reduce(function (a, b) {
+    return a + b;
+  }, 0);
   return result;
 };
 
-const res1 = a('kongzhi');
-const res2 = addArray([1, 2, 3, 4]);
-
+var res1 = a('kongzhi');
+var res2 = addArray([1, 2, 3, 4]);
 console.log(res1);
 console.log(res2);
