@@ -3,14 +3,15 @@ import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import json from 'rollup-plugin-json';
 import replace from 'rollup-plugin-replace';
-import uglify from 'rollup-plugin-uglify';
+import { uglify } from 'rollup-plugin-uglify';
 
 export default {
   input: './src/main.js',
   output: {
-    file: 'index.js',
+    file: './dist/index.js',
     format: 'cjs'
   },
+  sourceMap:true,
   plugins: [
     resolve({
       jsnext: true,  // 该属性是指定将Node包转换为ES2015模块
@@ -26,6 +27,6 @@ export default {
     replace({
       ENV: JSON.stringify(process.env.NODE_ENV || 'development')
     }),
-    (process.env.NODE_ENV === 'production' && uglify())
+    ((process.env.NODE_ENV.indexOf('production')!==-1) && uglify())
   ]
 }
