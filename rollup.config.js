@@ -8,7 +8,7 @@ import { uglify } from 'rollup-plugin-uglify';
 export default {
   input: './src/main.js',
   output: {
-    file: './dist/index.js',
+    file: './index.js',
     format: 'cjs'
   },
   sourceMap:true,
