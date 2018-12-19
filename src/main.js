@@ -39,7 +39,7 @@ export function exportExl(json,header,name,type){
     var href = URL.createObjectURL(tmpDown); //创建对象超链接
     var a = document.createElement("a");
     a.href = href;
-    a.download=name;
+    a.download=name+'.xlsx';
     a.click();
 
     // document.getElementById("hf").href = href; //绑定a标签
