@@ -20,7 +20,7 @@
   },
   "name": "bf-react-export",
   "description": "react导出",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "main": "index.js",
   "repository": {
     "type": "git",
